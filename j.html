@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ /* Announcement ticker */
+    .ticker {
+      background-color: yellow;
+      color: red;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+   .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 20s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JECRC Study Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+<body background="C:\Users\Aditya\Desktop\ju.png" width=100>
+<!-- Running Clock (Top-Left Corner) -->
+<div id="clock" style="
+  position: fixed;
+  top: 40px;
+  left: 1390px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px 14px;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  border-radius: 8px;
+  z-index: 999;
+"></div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock(); // run immediately
+</script>
+  <!-- Announcement Ticker -->
+  <div class="ticker text-sm p-2">
+    <div class="ticker-text">
+      📢 Welcome to the JECRC Study Portal! | 💡 Check back regularly for updates. | 🎯 Prepare well for your exams!
+    </div>
+  </div>
+ <div class="logo-container">
+    <img src="default_logo1.png" alt="JECRC Logo" class="logo" width="140" height="200">
+  </div>
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white p-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">JECRC Study Portal</h1>
+      <nav class="space-x-4 text-sm">
+          <a href="j.html" class="hover:underline text-gray-200">🏠 Home</a>
+          <a href="notes-2.html" class="hover:underline text-gray-200">📝 Notes</a>
+  <a href="ass.html" class="hover:underline text-gray-200">📝 Assignments</a>
+  <a href="sp.html" class="hover:underline text-gray-200">📄 Previous Papers</a>
+  <a href="syllabus.html" class="hover:underline text-gray-200">📘 Syllabus</a>
+  <a href="about.html" class="hover:underline text-gray-200">👥 About Us</a>
+  <a href="feedback.html" class="hover:underline text-gray-200">💬 Feedback</a>
+</ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6 mt-6">
+
+    <section id="home" class="text-center my-10">
+      <h2 class="text-3xl font-bold mb-4">Welcome to JECRC Study Portal</h2>
+      <p class="text-lg text-white-900">Access your notes, assignments, question papers, and more — all in one place.</p>
+    </section>
+
+    <!-- Add your content sections here -->
+    <section id="notes" class="my-12">
+      <h3 class="text-2xl font-semibold mb-2">📚 Notes</h3>
+      <p class="text-white-900"><font-color="white">Download organized notes by semester and subject.</font></p>
+    </section>
+
+    <section id="assignments" class="my-12">
+      <h3 class="text-2xl font-semibold mb-2">📝 Assignments</h3>
+      <p class="text-white-900">All solved/unresolved assignments in one click.</p>
+    </section>
+
+    <section id="papers" class="my-12">
+      <h3 class="text-2xl font-semibold mb-2">📄 Previous Question Papers</h3>
+      <p class="text-white-900">Practice from past years' papers for better preparation.</p>
+    </section>
+
+    <!-- Government Institutions Section -->
+    <section class="my-20">
+      <h2 class="text-2xl font-bold text-center mb-4">🎓 Government Educational Institutions</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <!-- Link Card -->
+        <a href="https://www.iitb.ac.in" target="_blank" class="inst-card">🏫 IIT Bombay</a>
+        <a href="https://www.iitd.ac.in" target="_blank" class="inst-card">🏫 IIT Delhi</a>
+        <a href="https://www.nitc.ac.in" target="_blank" class="inst-card">🏫 NIT Calicut</a>
+        <a href="https://www.iisc.ac.in" target="_blank" class="inst-card">🏫 IISc Bangalore</a>
+        <a href="https://www.ignou.ac.in" target="_blank" class="inst-card">📘 IGNOU</a>
+        <a href="https://www.aicte-india.org" target="_blank" class="inst-card">📘 AICTE</a>
+        <a href="https://www.ugc.gov.in" target="_blank" class="inst-card">📘 UGC</a>
+        <a href="https://www.cbse.gov.in" target="_blank" class="inst-card">📘 CBSE</a>
+        <a href="https://nta.ac.in" target="_blank" class="inst-card">📝 NTA</a>
+        <a href="https://www.ncert.nic.in" target="_blank" class="inst-card">📗 NCERT</a>
+        <a href="https://nptel.ac.in" target="_blank" class="inst-card">🎥 NPTEL</a>
+        <a href="https://swayam.gov.in" target="_blank" class="inst-card">📚 SWAYAM</a>
+        <a href="https://diksha.gov.in" target="_blank" class="inst-card">📲 DIKSHA</a>
+        <a href="https://pmevidya.education.gov.in" target="_blank" class="inst-card">📺 PM eVIDYA</a>
+        <a href="https://ndl.iitkgp.ac.in" target="_blank" class="inst-card">📖 NDLI</a>
+        <a href="https://naac.gov.in" target="_blank" class="inst-card">🏛️ NAAC</a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-800 text-white py-8 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      <div>
+        <h2 class="text-xl font-bold mb-2">🎓 JECRC Portal</h2>
+        <p class="text-sm">Your one-stop study platform for notes, assignments, past papers & more!</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2">🔗 Quick Links</h3>
+<ul class="text-sm space-y-1">
+  <li><a href="j.html" class="hover:underline text-gray-200">🏠 Home</a></li>
+<li><a href="notes-2.html" class="hover:underline text-gray-200">📝 Notes</a></li>
+  <li><a href="ass.html" class="hover:underline text-gray-200">📝 Assignments</a></li>
+  <li><a href="sp.html" class="hover:underline text-gray-200">📄 Previous Papers</a></li>
+  <li><a href="syllabus.html" class="hover:underline text-gray-200">📘 Syllabus</a></li>
+  <li><a href="about.html" class="hover:underline text-gray-200">👥 About Us</a></li>
+  <li><a href="feedback.html" class="hover:underline text-gray-200">💬 Feedback</a></li>
+</ul>
+
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2">📱 Follow Us</h3>
+        <div class="flex gap-3">
+  <a href="https://www.linkedin.com/school/jecrcuniversity/posts/?feedView=all" target="_blank" title="JECRC LinkedIn"><img src="download.png" alt="LinkedIn" class="w-6 h-6 hover:scale-110 transition"></a>
+    <a href="https://twitter.com/jecrcuniversity" target="_blank" title="JECRC Twitter"><img src="1.png" alt="X" class="w-6 h-6 hover:scale-110 transition"></a>
+<a href="https://www.facebook.com/jecrcuniversityofficial/" target="_blank" title="JECRC Facebook">
+<img src="2.png" alt="Facebook"class="w-6 h-6 hover:scale-110 transition"></a>
+<a href="https://www.youtube.com/@jecrcuvideo" target="_blank" title="JECRC YouTube"><img src="3.webp" alt="YouTube"class="w-6 h-6 hover:scale-110 transition"></a>
+        </div>
+      </div>
+
+
+ 
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2">📧 Newsletter</h3>
+        <p class="text-sm mb-2">Stay updated! Enter your email:</p>
+        <form>
+          <input type="email" placeholder="you@jecrc.ac.in" class="w-full p-2 rounded text-black mb-2">
+          <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 rounded transition">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300 border-t border-indigo-600 pt-4">
+      &copy; 2025 JECRC Study Portal. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Extra Styling for Cards -->
+  <style>
+    .inst-card {
+      background: white;
+      color: #333;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      width: 180px;
+      text-decoration: none;
+    }
+    .inst-card:hover {
+      transform: scale(1.05);
+      background: #0077cc;
+      color: white;
+      box-shadow: 4px 4px 14px rgba(0,0,0,0.2);
+    }
+  </style>
+
+</body>
+</html>
